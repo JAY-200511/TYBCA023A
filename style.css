@@ -1,0 +1,179 @@
+:root {
+    --bg-color: #121829;
+    --card-color: #1a2238;
+    --primary-color: #5372f0;
+    --secondary-color: #4655a2;
+    --text-color: #f0f4f9;
+    --border-color: #3a476f;
+    --placeholder-color: #9da3ae;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem 1rem;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+header p {
+    color: var(--placeholder-color);
+    font-size: 1.1rem;
+}
+
+.student-info {
+    background-color: var(--card-color);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1rem 1.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+main {
+    width: 100%;
+    max-width: 1400px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.cipher-card {
+    background-color: var(--card-color);
+    border-radius: 12px;
+    padding: 2rem;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.cipher-card h2 {
+    font-size: 1.8rem;
+    text-align: center;
+    color: var(--primary-color);
+}
+
+.description {
+    color: var(--placeholder-color);
+    text-align: center;
+    line-height: 1.6;
+    flex-grow: 1; 
+}
+
+.cipher-io {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+textarea, input {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    resize: none;
+}
+
+textarea::placeholder, input::placeholder {
+    color: var(--placeholder-color);
+}
+
+textarea {
+    min-height: 120px;
+}
+
+textarea:focus, input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(83, 114, 240, 0.3);
+}
+
+.cipher-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.button-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+button {
+    padding: 0.8rem;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: var(--secondary-color);
+}
+
+footer {
+    text-align: center;
+    margin-top: 3rem;
+    color: var(--placeholder-color);
+}
+
+footer a {
+    color: var(--primary-color);
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+    display: inline-block;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 2rem;
+    }
+    .student-info {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    .cipher-card {
+        padding: 1.5rem;
+    }
+    .button-group, .cipher-controls {
+        gap: 0.5rem;
+    }
+}

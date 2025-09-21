@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cipher Project | Jay Joshi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Classical Cipher Toolkit 🛡️</h1>
+        <p>An interactive demonstration of classical encryption techniques.</p>
+    </header>
+
+    <div class="student-info">
+        <p><strong>Name:</strong> Jay Joshi</p>
+        <p><strong>Roll No:</strong> TYBCA023A</p>
+        <p><strong>Subject:</strong> Network Security</p>
+    </div>
+
+    <main>
+        <div class="cipher-card">
+            <h2>Caesar Cipher</h2>
+            <p class="description">A simple substitution cipher where each letter in the plaintext is shifted a certain number of places down the alphabet.</p>
+            <div class="cipher-io">
+                <textarea id="caesar-input" placeholder="Enter plaintext..."></textarea>
+                <textarea id="caesar-output" placeholder="Result..." readonly></textarea>
+            </div>
+            <div class="cipher-controls">
+                <input type="number" id="caesar-key" placeholder="Key (e.g., 3)" min="1" value="3">
+                <div class="button-group">
+                    <button id="caesar-encrypt-btn">Encrypt</button>
+                    <button id="caesar-decrypt-btn">Decrypt</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="cipher-card">
+            <h2>Monoalphabetic Cipher</h2>
+            <p class="description">A substitution cipher using a fixed key, where the key is a 26-letter shuffled alphabet.</p>
+            <div class="cipher-io">
+                <textarea id="mono-input" placeholder="Enter plaintext..."></textarea>
+                <textarea id="mono-output" placeholder="Result..." readonly></textarea>
+            </div>
+            <div class="cipher-controls">
+                <input type="text" id="mono-key" placeholder="26-letter unique key (e.g., QWERTY...)" value="QWERTYUIOPASDFGHJKLZXCVBNM">
+                <div class="button-group">
+                    <button id="mono-encrypt-btn">Encrypt</button>
+                    <button id="mono-decrypt-btn">Decrypt</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="cipher-card">
+            <h2>Transposition Cipher</h2>
+            <p class="description">A columnar transposition cipher that rearranges the letters of the plaintext based on a keyword.</p>
+            <div class="cipher-io">
+                <textarea id="transpo-input" placeholder="Enter plaintext..."></textarea>
+                <textarea id="transpo-output" placeholder="Result..." readonly></textarea>
+            </div>
+            <div class="cipher-controls">
+                <input type="text" id="transpo-key" placeholder="Keyword (e.g., 'SECRET')">
+                 <div class="button-group">
+                    <button id="transpo-encrypt-btn">Encrypt</button>
+                    <button id="transpo-decrypt-btn">Decrypt</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p><a href="index.html">← Back to Introduction</a></p>
+        <p>Created by Jay Joshi. &copy; 2025</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
